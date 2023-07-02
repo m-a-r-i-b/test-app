@@ -15,7 +15,8 @@ const App = () => {
         <p className="App-intro">
           Current count : {count}.
         </p>
-        <button onClick={()=>{setCount(count+1)}}>Click me</button>
+        <button onClick={()=>{setCount(count+1)}}>Increment</button>
+        <button onClick={()=>{setCount(count-1)}}>Decrement</button>
       </div>
     );
 }
