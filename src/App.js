@@ -6,6 +6,10 @@ import './App.css';
 const App = () => {
   const [count, setCount] = useState(0);
 
+  const decrementCount = () => {
+    setCount(count - 1);
+  };
+
   return (
     <div className="App">
       <div className="App-header">
@@ -15,8 +19,8 @@ const App = () => {
       <p className="App-intro">
         Current count: {count}.
       </p>
-      <button onClick={() => { setCount(count + 1) }}>Increment</button>
-      <button onClick={() => { setCount(count - 1) }}>Decrement</button>
+      <button onClick={() => {setCount(count + 1)}}>Increment</button>
+      <button onClick={decrementCount}>Decrement</button>
     </div>
   );
 }
