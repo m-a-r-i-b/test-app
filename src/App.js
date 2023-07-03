@@ -16,6 +16,7 @@ const App = () => {
           Current count : {count}.
         </p>
         <button onClick={()=>{setCount(count+1)}}>Increment</button>
+        <button onClick={()=>{setCount(count-1)}}>Decrement</button>
       </div>
     );
 }
