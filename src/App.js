@@ -4,15 +4,7 @@ import logo from './logo.svg';
 import './App.css';
 
 const App = () => {
-  const [count, setCount] =  useState(0);
-
-  const handleIncrement = () => {
-    setCount(count + 1);
-  };
-
-  const handleDecrement = () => {
-    setCount(count - 1);
-  };
+  const [count, setCount] = useState(0);
 
   return (
     <div className="App">
@@ -21,10 +13,10 @@ const App = () => {
         <h2>Welcome to React</h2>
       </div>
       <p className="App-intro">
-        Current count : {count}.
+        Current count: {count}.
       </p>
-      <button onClick={handleIncrement}>Increment</button>
-      <button onClick={handleDecrement}>Decrement</button>
+      <button onClick={() => { setCount(count + 1) }}>Increment</button>
+      <button onClick={() => { setCount(count - 1) }}>Decrement</button>
     </div>
   );
 }
